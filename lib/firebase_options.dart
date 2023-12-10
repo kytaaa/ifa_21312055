@@ -44,37 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBV83TZaNL6WQZ1aWWUW2JOQRsjrK1cQlg',
-    appId: '1:44413210646:web:0fa024981086189598a537',
-    messagingSenderId: '44413210646',
-    projectId: 'ifa-21312055-90f9e',
-    authDomain: 'ifa-21312055-90f9e.firebaseapp.com',
-    storageBucket: 'ifa-21312055-90f9e.appspot.com',
+    apiKey: 'AIzaSyBiUdU669KRJ8L-toZTRrUZTeqv5Y3nI8U',
+    appId: '1:1081605988382:web:655558bb0f8f805f5ece0f',
+    messagingSenderId: '1081605988382',
+    projectId: 'ifa-21312055',
+    authDomain: 'ifa-21312055.firebaseapp.com',
+    storageBucket: 'ifa-21312055.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAaXOmb_xxfkdPys1JZobXGVbSDlMSb-Ak',
-    appId: '1:44413210646:android:1911900cd0c58b5498a537',
-    messagingSenderId: '44413210646',
-    projectId: 'ifa-21312055-90f9e',
-    storageBucket: 'ifa-21312055-90f9e.appspot.com',
+    apiKey: 'AIzaSyBFajNQdr1SuaglJQiAtUEp8n1P3Y4TWdQ',
+    appId: '1:1081605988382:android:d60e149ccd65eff55ece0f',
+    messagingSenderId: '1081605988382',
+    projectId: 'ifa-21312055',
+    storageBucket: 'ifa-21312055.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD5sn2Dlu3Wvel9jdchpdMLpFx-NJTskGY',
-    appId: '1:44413210646:ios:87565a92692cf31998a537',
-    messagingSenderId: '44413210646',
-    projectId: 'ifa-21312055-90f9e',
-    storageBucket: 'ifa-21312055-90f9e.appspot.com',
+    apiKey: 'AIzaSyAFQP_tLeQG_AIEpx1ZT-A6J8AVzJR3KSE',
+    appId: '1:1081605988382:ios:fc1d604f201ff86e5ece0f',
+    messagingSenderId: '1081605988382',
+    projectId: 'ifa-21312055',
+    storageBucket: 'ifa-21312055.appspot.com',
     iosBundleId: 'com.example.ifa21312055',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD5sn2Dlu3Wvel9jdchpdMLpFx-NJTskGY',
-    appId: '1:44413210646:ios:a40c3f61e45ca77f98a537',
-    messagingSenderId: '44413210646',
-    projectId: 'ifa-21312055-90f9e',
-    storageBucket: 'ifa-21312055-90f9e.appspot.com',
+    apiKey: 'AIzaSyAFQP_tLeQG_AIEpx1ZT-A6J8AVzJR3KSE',
+    appId: '1:1081605988382:ios:9ddea4a5305ff5595ece0f',
+    messagingSenderId: '1081605988382',
+    projectId: 'ifa-21312055',
+    storageBucket: 'ifa-21312055.appspot.com',
     iosBundleId: 'com.example.ifa21312055.RunnerTests',
   );
 }

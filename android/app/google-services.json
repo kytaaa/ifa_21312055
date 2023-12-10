@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "44413210646",
-    "project_id": "ifa-21312055-90f9e",
-    "storage_bucket": "ifa-21312055-90f9e.appspot.com"
+    "project_number": "1081605988382",
+    "project_id": "ifa-21312055",
+    "storage_bucket": "ifa-21312055.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:44413210646:android:1911900cd0c58b5498a537",
+        "mobilesdk_app_id": "1:1081605988382:android:d60e149ccd65eff55ece0f",
         "android_client_info": {
           "package_name": "com.example.ifa_21312055"
         }
@@ -15,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAaXOmb_xxfkdPys1JZobXGVbSDlMSb-Ak"
+          "current_key": "AIzaSyBFajNQdr1SuaglJQiAtUEp8n1P3Y4TWdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081605988382:android:73cbdcd575f12dcf5ece0f",
+        "android_client_info": {
+          "package_name": "teknokrat.com.ifa_21312055"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFajNQdr1SuaglJQiAtUEp8n1P3Y4TWdQ"
         }
       ],
       "services": {

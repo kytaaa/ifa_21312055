@@ -20,7 +20,7 @@ void main() async {
 class MyApp extends StatelessWidget {
 final CAuth = Get.put(AuthController(), permanent: true);
 
-  @override
+@override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
       stream: CAuth.streamAuthStatus,
@@ -28,7 +28,10 @@ final CAuth = Get.put(AuthController(), permanent: true);
         if (snapshot.connectionState == ConnectionState.active) {
           return GetMaterialApp(
             title: "Application",
-            initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+            initialRoute:
+                snapshot.data != null && snapshot.data!.emailVerified == true
+                    ? Routes.HOME
+                    : Routes.LOGIN,
             getPages: AppPages.routes,
           );
         }

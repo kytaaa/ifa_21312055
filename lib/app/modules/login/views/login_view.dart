@@ -1,18 +1,18 @@
+import 'package:ifa_21312055/app/controllers/auth_controller.dart';
+import 'package:ifa_21312055/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:ifa_21312055/app/controllers/auth_controller.dart';
 
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   final cAuth = Get.find<AuthController>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen Login'),
+        title: const Text('Login Screen'),
         centerTitle: true,
       ),
       body: Container(
@@ -35,9 +35,33 @@ class LoginView extends GetView<LoginController> {
               height: 10,
             ),
             ElevatedButton(
-            onPressed: () {}, 
-            child: Text("Login"),
-            )
+              onPressed: () =>
+                  cAuth.login(controller.cEmail.text, controller.cPass.text),
+              child: Text("Login"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+              onPressed: () => Get.toNamed(Routes.RESET_PASSWORD),
+              child: Text("Reset Password"),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Belum Punya Akun ?"),
+                TextButton(
+                  onPressed: () => Get.toNamed(Routes.SIGNUP),
+                  child: Text("Daftar Disini"),
+                )
+              ],
+            ),
           ],
         ),
       ),

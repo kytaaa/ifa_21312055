@@ -5,10 +5,20 @@ abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
   static const LOGIN = _Paths.LOGIN;
+  static const SIGNUP = _Paths.SIGNUP;
+  static const RESET_PASSWORD = _Paths.RESET_PASSWORD;
+  static const MAHASISWA = _Paths.MAHASISWA;
+  static const NPM_DOSEN = _Paths.NPM_DOSEN;
+  static const DOSEN = _Paths.DOSEN;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const LOGIN = '/login';
+  static const SIGNUP = '/signup';
+  static const RESET_PASSWORD = '/reset-password';
+  static const MAHASISWA = '/mahasiswa';
+  static const NPM_DOSEN = '/npm-dosen';
+  static const DOSEN = '/dosen';
 }
