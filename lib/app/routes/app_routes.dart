@@ -10,6 +10,7 @@ abstract class Routes {
   static const MAHASISWA = _Paths.MAHASISWA;
   static const NPM_DOSEN = _Paths.NPM_DOSEN;
   static const DOSEN = _Paths.DOSEN;
+  static const PEGAWAI = _Paths.PEGAWAI;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const MAHASISWA = '/mahasiswa';
   static const NPM_DOSEN = '/npm-dosen';
   static const DOSEN = '/dosen';
+  static const PEGAWAI = '/pegawai';
 }

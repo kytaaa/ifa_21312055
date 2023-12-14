@@ -5,6 +5,8 @@ import 'package:ifa_21312055/app/controllers/auth_controller.dart';
 import 'package:ifa_21312055/app/modules/dosen/views/dosen_add_view.dart';
 import 'package:ifa_21312055/app/modules/dosen/views/dosen_view.dart';
 import 'package:ifa_21312055/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
+import 'package:ifa_21312055/app/modules/pegawai/views/pegawai_add_view.dart';
+import 'package:ifa_21312055/app/modules/pegawai/views/pegawai_view.dart';
 
 import '../../mahasiswa/views/mahasiswa_view.dart';
 import '../controllers/home_controller.dart';
@@ -35,10 +37,12 @@ class _DasboardAdminState extends State<DasboardAdmin> {
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
       },
-      {'title': 'Data Dosen', 'view': DosenView(), 'add': () => DosenAddView()},
+      {'title': 'Data Dosen', 
+      'view': DosenView(), 
+      'add': () => DosenAddView()},
           {'title': 'Data Pegawai',
-          'view': MahasiswaView(),
-              'add': () => MahasiswaAddView()
+          'view': PegawaiView(),
+              'add': () => PegawaiAddView()
               },
   ];
   

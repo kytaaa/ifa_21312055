@@ -3,39 +3,37 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DosenController extends GetxController {
+class PegawaiController extends GetxController {
   //TODO: Implement DosenController
-  late TextEditingController cNIDN;
+  late TextEditingController cNP;
   late TextEditingController cNama;
   late TextEditingController cStatus;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  get selectedStatus => null;
-
   Future<QuerySnapshot<Object?>> GetData() async {
-    CollectionReference dosen = firestore.collection('dosen');
+    CollectionReference pegawai = firestore.collection('pegawai');
 
-    return dosen.get();
+    return pegawai.get();
   }
 
   Stream<QuerySnapshot<Object?>> streamData() {
-    CollectionReference dosen = firestore.collection('dosen');
-    return dosen.snapshots();
+    CollectionReference pegawai = firestore.collection('pegawai');
+    return pegawai.snapshots();
   }
-void add(String nidn, String nama, String status) async {
-    CollectionReference products = firestore.collection("dosen");
+void add(String np, String nama, String status) async {
+    CollectionReference products = firestore.collection("pegawai");
 
     try {
       await products.add({
-        "nidn": nidn,
+        "np": np,
         "nama": nama,
         "status": status,
       });
       Get.defaultDialog(
           title: "Berhasil",
-          middleText: "Berhasil menyimpan data dosen",
+          middleText: "Berhasil menyimpan data pegawai",
           onConfirm: () {
-            cNIDN.clear();
+            cNP.clear();
             cNama.clear();
             cStatus.clear();
             Get.back();
@@ -47,31 +45,31 @@ void add(String nidn, String nama, String status) async {
     print(e);
       Get.defaultDialog(
         title: "Terjadi Kesalahan",
-        middleText: "Gagal Menambahkan dosen.",
+        middleText: "Gagal Menambahkan pegawai.",
       );
     }
   }
   Future<DocumentSnapshot<Object?>> getData(String id) async {
-    DocumentReference docRef = firestore.collection("dosen").doc(id);
+    DocumentReference docRef = firestore.collection("pegawai").doc(id);
 
     return docRef.get();
   }
 
-  void Update(String nidn, String nama, String status, String id) async {
-    DocumentReference dosenById = firestore.collection("dosen").doc(id);
+  void Update(String np, String nama, String status, String id) async {
+    DocumentReference pegawaiById = firestore.collection("pegawai").doc(id);
 
     try {
-      await dosenById.update({
-        "nidn": nidn,
+      await pegawaiById.update({
+        "np": np,
         "nama": nama,
         "status": status,
       });
 
       Get.defaultDialog(
         title: "Berhasil",
-        middleText: "Berhasil mengubah data dosen.",
+        middleText: "Berhasil mengubah data pegawai.",
         onConfirm: () {
-          cNIDN.clear();
+          cNP.clear();
           cNama.clear();
           cStatus.clear();
           Get.back();
@@ -84,13 +82,13 @@ void add(String nidn, String nama, String status) async {
       print(e);
       Get.defaultDialog(
         title: "Terjadi Kesalahan",
-        middleText: "Gagal Menambahkan Mahasiswa.",
+        middleText: "Gagal Menambahkan Pegawai.",
       );
     }
   }
 
   void delete(String id) {
-    DocumentReference docRef = firestore.collection("dosen").doc(id);
+    DocumentReference docRef = firestore.collection("pegawai").doc(id);
 
     try {
       Get.defaultDialog(
@@ -118,7 +116,7 @@ void add(String nidn, String nama, String status) async {
 @override
   void onInit() {
     // TODO: implement onInit
-    cNIDN = TextEditingController();
+    cNP = TextEditingController();
     cNama = TextEditingController();
     cStatus = TextEditingController();
     super.onInit();
@@ -127,7 +125,7 @@ void add(String nidn, String nama, String status) async {
   @override
   void onClose() {
     // TODO: implement onClose
-    cNIDN.dispose();
+    cNP.dispose();
     cNama.dispose();
     cStatus.dispose();
     super.onClose();
