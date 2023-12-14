@@ -1,3 +1,4 @@
+import 'package:ifa_21312055/app/modules/dosen/controllers/dosen_controller.dart';
 import 'package:ifa_21312055/app/modules/dosen/views/dosen_update_view.dart';
 import 'package:ifa_21312055/app/routes/app_pages.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

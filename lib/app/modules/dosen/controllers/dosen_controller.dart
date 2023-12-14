@@ -74,6 +74,7 @@ void add(String nidn, String nama, String status) async {
           cStatus.clear();
           Get.back();
           Get.back();
+          Get.back();
         },
         textConfirm: "OK",
       );

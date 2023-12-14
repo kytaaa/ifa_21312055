@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ifa_21312055/app/controllers/auth_controller.dart';
+import 'package:ifa_21312055/app/modules/dosen/views/dosen_add_view.dart';
+import 'package:ifa_21312055/app/modules/dosen/views/dosen_view.dart';
 import 'package:ifa_21312055/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
-import 'package:ifa_21312055/app/modules/mahasiswa/views/mahasiswa_view.dart';
 
+import '../../mahasiswa/views/mahasiswa_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController>{
@@ -33,10 +35,7 @@ class _DasboardAdminState extends State<DasboardAdmin> {
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
       },
-        {'title': 'Data Dosen', 
-        'view': MahasiswaView(),
-            'add': () => MahasiswaAddView()
-        },
+      {'title': 'Data Dosen', 'view': DosenView(), 'add': () => DosenAddView()},
           {'title': 'Data Pegawai',
           'view': MahasiswaView(),
               'add': () => MahasiswaAddView()
@@ -53,7 +52,7 @@ class _DasboardAdminState extends State<DasboardAdmin> {
         title: Text(_fragment[_index]['title']),
         actions: [
           IconButton(onPressed: () => Get.to(_fragment[_index]['add']),
-           icon: Icon(Icons.add_circle_outline))
+          icon: Icon(Icons.add_circle_outline))
         ],
       ),
       body: _fragment[_index]['view'],

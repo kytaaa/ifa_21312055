@@ -20,7 +20,7 @@ class DosenUpdateView extends GetView<DosenController> {
             var data = snapshot.data!.data() as Map<String, dynamic>;
             controller.cNIDN.text = data['nidn'];
             controller.cNama.text = data['nama'];
-             controller.cStatus.text = data['status'];
+            controller.cStatus.text = data['status'];
             return Padding(
               padding: EdgeInsets.all(8),
               child: Column(

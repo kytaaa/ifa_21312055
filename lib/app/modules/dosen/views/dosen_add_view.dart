@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-class MahasiswaAddView extends GetView<DosenController> {
-  const MahasiswaAddView({Key? key}) : super(key: key);
+class DosenAddView extends GetView<DosenController> {
+  const DosenAddView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
